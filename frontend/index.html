@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Route 53 Management Console</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Login screen -->
+  <div id="login-view" class="login hidden">
+    <form id="login-form" class="login-card">
+      <h1>Sign in</h1>
+      <label>Username</label>
+      <input id="login-user" value="admin" autocomplete="username">
+      <label>Password</label>
+      <input id="login-pass" type="password" value="admin123" autocomplete="current-password">
+      <div id="login-error" class="error"></div>
+      <button class="btn primary" type="submit">Sign in</button>
+    </form>
+  </div>
+
+  <!-- App shell -->
+  <div id="app-view" class="hidden">
+    <header class="topbar">
+      <div class="brand">aws</div>
+      <div class="service">Route 53</div>
+      <div class="spacer"></div>
+      <div class="top-item">Global</div>
+      <div class="top-item" id="user-label">admin</div>
+      <button class="top-item link-btn" id="logout-btn">Sign out</button>
+    </header>
+    <div class="layout">
+      <nav class="sidebar">
+        <div class="side-title">Route 53</div>
+        <a href="#/dashboard">Dashboard</a>
+        <div class="side-group">DNS management</div>
+        <a href="#/hostedzones">Hosted zones</a>
+        <a href="#/healthchecks">Health checks</a>
+        <div class="side-group">Traffic management</div>
+        <a href="#/trafficpolicies">Traffic policies</a>
+        <div class="side-group">Resolver</div>
+        <a href="#/resolver">Resolver</a>
+        <a href="#/profiles">Profiles</a>
+      </nav>
+      <main id="content"></main>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+  <script src="app.js"></script>
+</body>
+</html>

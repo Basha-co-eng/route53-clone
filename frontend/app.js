@@ -1,5 +1,5 @@
 /* ===== Config ===== */
-const API = "http://localhost:8000";
+const API = "https://route53-clone-gbpz.onrender.com";
 const PAGE_SIZE = 10;
 const RECORD_TYPES = ["A","AAAA","CNAME","TXT","MX","NS","PTR","SRV","CAA","SOA"];
 const HINTS = {
